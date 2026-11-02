@@ -52,5 +52,4 @@ JSONL framing defaults to 8 MiB lines and 128 JSON nesting levels. Pending stdin
 
 See the [getting-started guide](getting-started.md) and [overview](index.md).
 
-
 [Full typed API: properties, parameters, defaults, and returns](typed-api.md)

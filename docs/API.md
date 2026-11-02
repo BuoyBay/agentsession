@@ -5,16 +5,12 @@ Live local agent sessions for Buoy Studio, built on `agentkit` JSONL codecs,
 ACP, Codex app-server, Claude stream-json, and explicitly configured MCP tools.
 It never guesses an executable, CLI arguments, provider, T3 method, or remote URL.
 
-## Build and verify
-
+## Install and connect
 
 Copy the `agentkit`, `processkit`, `editorkit`, `projectkit` and `agentsession`
 archives into a consumer's `packages/`. Use `Import agentsession`, `Import agentkit`
 and `Import projectkit`. The [example](../examples/agentsession_demo.bui)
 performs an explicit ACP handshake without sending a model prompt.
-
-The fixture runner launches only the checked-in Python protocol peer. It does
-not invoke Claude, Codex, T3, a cloud model or a real authentication endpoint.
 
 ## Session API
 
@@ -82,9 +78,8 @@ Project read/list/proposal permissions can be satisfied through this bridge;
 other native tools require denial. CLI registration is never silently added.
 
 The control shapes follow the official [Claude Agent SDK implementation](https://github.com/anthropics/claude-agent-sdk-python/blob/main/src/claude_agent_sdk/_internal/query.py).
-Initializing stream-json, prompting, streamed output, SDK MCP, tool denial and
-interrupt requests are fixture-tested. Endpoint CLI flags/version compatibility
-remain the caller's explicit configuration.
+Endpoint CLI flags and version compatibility remain the caller's explicit
+configuration.
 
 ## T3 and other MCP servers
 
@@ -149,13 +144,3 @@ unvalidated response, so never replace the saved ID from a failed session.
 Resume again with the original saved ID after correcting the cause. Resuming a
 thread does not establish that an interrupted turn completed; do not blindly
 resend its prompt, which could duplicate work.
-
-The fixture tests cover all four handshakes, Unicode fragmentation, backpressure
-through a large prompt, cancellation, separate stderr, diagnostic bounds,
-authoritative unsaved reads, explicit proposal approval without disk writes,
-unmapped tool denial, request correlation, fixed MCP arguments, synthetic token
-handoff/refresh and isolated child environment/resume. Module/test/example sources
-are compiler-checked on six Buoy targets. Actual execution uses local fixture
-processes on the platforms recorded by the combined Studio verification report.
-
-Test suites and fixtures are maintainer-local and are not part of this public repository.

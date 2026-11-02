@@ -15,7 +15,7 @@ Install the `agentkit`, `processkit`, `editorkit`, `projectkit`, and `agentsessi
 
 This complete example takes an explicit executable and absolute project folder. Any further arguments belong to that executable. It registers an unsaved scratch buffer, polls initialization for at most 30 seconds, and closes the session without sending a model prompt.
 
-```buoy
+```basic
 Import agentsession
 Import agentkit
 Import projectkit

@@ -1,6 +1,6 @@
 # Run local agent sessions over owned subprocess pipes
 
-Live local agent sessions for Buoy Studio, built on `agentkit` JSONL codecs,
+Live local agent sessions, built on `agentkit` JSONL codecs,
 `processkit` subprocess pipes and `projectkit` in-memory items. The package drives
 ACP, Codex app-server, Claude stream-json, and explicitly configured MCP tools.
 It never guesses an executable, CLI arguments, provider, T3 method, or remote URL.
@@ -19,7 +19,7 @@ BPM also resolves `agentkit`, `processkit`, `projectkit`.
 
 ## Example
 
-```buoy
+```basic
 Import agentsession
 Import agentkit
 Import projectkit
@@ -71,7 +71,6 @@ On your own machine, install Buoy and run:
 buoy ai init --both
 ```
 
-The generated agent files and editor settings stay local and are ignored by Git.
 
 ## Contributing
 
