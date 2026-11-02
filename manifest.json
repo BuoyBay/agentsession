@@ -1,1 +1,1 @@
-{"schema":1,"name":"agentsession","version":"0.1.0","description":"Local ACP, Codex, Claude, and MCP sessions over subprocess pipes"}
+{"schema":1,"name":"agentsession","version":"0.1.0","description":"Run local agent sessions over pipes"}
