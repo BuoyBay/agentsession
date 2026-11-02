@@ -1,4 +1,4 @@
-# Run local agent sessions over owned subprocess pipes
+# Local ACP, Codex, Claude, and MCP sessions over subprocess pipes
 
 Live local agent sessions, built on `agentkit` JSONL codecs,
 `processkit` subprocess pipes and `projectkit` in-memory items. The package drives
