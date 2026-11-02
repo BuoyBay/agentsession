@@ -1,1 +1,1 @@
-{"schema":1,"name":"agentsession","version":"0.1.0","description":"Explicit local ACP, Codex app-server, Claude stream-json and MCP sessions over separate subprocess pipes with in-memory project tools"}
+{"schema":1,"name":"agentsession","version":"0.1.0","description":"Run local agent sessions over owned subprocess pipes"}
